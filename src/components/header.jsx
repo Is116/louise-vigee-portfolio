@@ -35,9 +35,29 @@ const Header = () => {
             </button>
           </div>
           <div
+              className={`
+                hidden justify-between items-center w-full md:flex md:w-auto lg:order-1
+                `}
+              id="mobile-menu-2"
+            >
+            <ul className="flex flex-col font-medium md:flex-row md:space-x-12 md:space-y-0  md:mt-0">
+              {links.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.url}
+                    className="block py-2 pr-4 pl-3 text-black rounded bg-primary-700 md:bg-transparent md:hover:bg-gray-100"
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div
             className={`${
               isMenuOpen ? 'block' : 'hidden'
-            } justify-between items-center w-full md:flex md:w-auto md:order-1`}
+            } justify-between items-center w-full  sm:w-auto sm:order-1 md:hidden`}
             id="mobile-menu-2"
           >
             <ul className="flex flex-col font-medium md:flex-row md:space-x-12 md:space-y-0  md:mt-0">
@@ -53,7 +73,6 @@ const Header = () => {
               ))}
             </ul>
           </div>
-        </div>
       </nav>
     </header>
   );
