@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 const Header = () => {
   const links = [
+    { text: 'Home', url: '/' },
     { text: 'Arts', url: '/arts' },
     { text: 'About', url: '/about' },
     { text: 'Contact', url: '/contact' }
@@ -17,12 +18,15 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="bg-white border-gray-200 px-4 md:px-6 py-2.5">
+      <nav className="bg-white border-gray-200 px-2 md:px-4 py-2.5">
         <div className="flex justify-between items-center mx-auto max-w-screen-xl">
-          <a href="/home" className="flex items-center">
-            <span className="self-center text-xl font-semibold whitespace-nowrap">Louise Vigée</span>
+          <a href="/" className="flex items-center order-2 md:order-1">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap">Louise Vigée</span>
           </a>
-          <div className="flex items-center md:order-2">
+          {/* <p className='text-base lg:text-lg order-1 md:order-1 hidden lg:flex'>
+            open for any offers and <br /> colaberations
+          </p> */}
+          <div className="flex items-center order-3 md:order-3">
             <button
               onClick={toggleMenu}
               type="button"
@@ -36,19 +40,19 @@ const Header = () => {
           </div>
           <div
               className={`
-                hidden justify-between items-center w-full md:flex md:w-auto lg:order-1
+                hidden justify-between items-center w-full md:flex md:w-auto md:order-2 border-2 border-[#878788] rounded-full
                 `}
               id="mobile-menu-2"
             >
-            <ul className="flex flex-col font-medium md:flex-row md:space-x-12 md:space-y-0  md:mt-0">
+            <ul className="flex flex-col font-medium text-lg md:flex-row gap-2 m-1">
               {links.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <button
                     href={link.url}
-                    className="block py-2 pr-4 pl-3 text-black rounded bg-primary-700 md:bg-transparent md:hover:bg-gray-100"
+                    className="block py-1 px-12 w-full text-black rounded-full bg-primary-700 md:bg-transparent md:hover:bg-[#ff6a69] focus:bg-[#ff6a69]"
                   >
                     {link.text}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -60,15 +64,15 @@ const Header = () => {
             } justify-between items-center w-full  sm:w-auto sm:order-1 md:hidden`}
             id="mobile-menu-2"
           >
-            <ul className="flex flex-col font-medium md:flex-row md:space-x-12 md:space-y-0  md:mt-0">
+            <ul className="flex flex-col font-medium text-lg md:flex-row gap-2 m-1">
               {links.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <button
                     href={link.url}
-                    className="block py-2 pr-4 pl-3 text-black rounded bg-primary-700 md:bg-transparent md:hover:bg-gray-100"
+                    className="block py-1 px-12 w-full text-black rounded-full bg-primary-700 md:bg-transparent md:hover:bg-[#ff6a69] focus:bg-[#ff6a69]"
                   >
                     {link.text}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
