@@ -1,56 +1,58 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Header = () => {
   const links = [
-    { text: 'Features', url: '#' },
-    { text: 'Marketplace', url: '#' },
-    { text: 'Company', url: '#' },
-    { text: 'Log in', url: '#' }
+    { text: 'Arts', url: '/arts' },
+    { text: 'About', url: '/about' },
+    { text: 'Contact', url: '/contact' }
   ];
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 md:px-8">
-        <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
-            />
+      <nav className="bg-white border-gray-200 px-4 md:px-6 py-2.5">
+        <div className="flex justify-between items-center mx-auto max-w-screen-xl">
+          <a href="/home" className="flex items-center">
+            <span className="self-center text-xl font-semibold whitespace-nowrap">Louise Vigée</span>
           </a>
-        </div>
-        <div className="flex md:hidden">
+          <div className="flex items-center md:order-2">
             <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={toggleMenu}
+              type="button"
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              aria-controls="mobile-menu-2"
+              aria-expanded={isMenuOpen}
             >
-                <span className="sr-only">Open main menu</span>
-                <FontAwesomeIcon icon={faBars} className="h-6 w-6" />
+              <span className="sr-only">Open main menu</span>
+              <FontAwesomeIcon icon={faBars} className="w-6 h-6" />
             </button>
-
-        </div>
-        <div className="hidden md:flex md:gap-x-12">
-          {links.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              {link.text}
-            </a>
-          ))}
-        </div>
-        <div className="hidden md:flex lg:flex-1 md:justify-end">
-          <a
-            href={links[3].url}
-            className="text-sm font-semibold leading-6 text-gray-900"
+          </div>
+          <div
+            className={`${
+              isMenuOpen ? 'block' : 'hidden'
+            } justify-between items-center w-full md:flex md:w-auto md:order-1`}
+            id="mobile-menu-2"
           >
-            {links[3].text} <span aria-hidden="true">&rarr;</span>
-          </a>
+            <ul className="flex flex-col font-medium md:flex-row md:space-x-12 md:space-y-0  md:mt-0">
+              {links.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.url}
+                    className="block py-2 pr-4 pl-3 text-black rounded bg-primary-700 md:bg-transparent md:hover:bg-gray-100"
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -58,3 +60,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
