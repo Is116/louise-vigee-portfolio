@@ -21,7 +21,7 @@ const Header = () => {
       <nav className="px-4 md:px-8 py-3">
         <div className="flex justify-between items-center mx-auto max-w-screen-xl">
           <a href="/" className="flex items-center order-2 md:order-1">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap">Louise Vigée</span>
+            <span className="self-center text-3xl font-semibold">Louise Vigée</span>
           </a>
           <p className='text-sm lg:text-md order-1 md:order-1'>
             open for any offers and <br /> colaberations
@@ -35,7 +35,7 @@ const Header = () => {
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
-              <FontAwesomeIcon icon={faBars} className="w-6 h-6 text-[#878788]" />
+              <FontAwesomeIcon icon={faBars} className="w-5 h-5 text-[#878788]" />
             </button>
           </div>
           <div
