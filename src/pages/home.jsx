@@ -1,9 +1,9 @@
 import React from 'react'
+import Hero from '../components/hero'
 
 const HomePage = () => {
-    console.log('HomePage component rendering');
   return (
-    <div>Home Page</div>
+    <Hero/>
   )
 }
 
