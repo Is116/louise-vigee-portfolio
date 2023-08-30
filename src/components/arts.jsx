@@ -24,11 +24,11 @@ const Arts = () => {
             <div className='flex'>
                 <p className='font-bold text-5xl lg:text-7xl uppercase'>Selected Arts</p>
             </div>
-            <div className='flex flex-col md:flex-row justify-center items-center gap-8 lg:gap-24 mt-8 lg:mt-20'>
+            <div className='flex flex-col md:flex-row justify-center items-center gap-8 lg:gap-12 mt-8 lg:mt-20'>
             {selectedArts.map((art) => (
             <div
               key={art.id}
-              className='flex flex-col justify-center w-full md:w-1/2 bg-[#ff6a69] lg:px-12 px-8 lg:py-11 py-8 rounded-2xl'
+              className='flex flex-col justify-center w-full md:w-1/2 bg-[#ff6a69]  lg:px-12 px-8 lg:py-11 py-8 rounded-2xl'
             >
               <img
                 className='rounded-2xl h-72 xl:h-96 w-full object-cover'

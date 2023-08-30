@@ -2,16 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --purple: #393A58;
-  --red: #ff6a69;
-  --blue: #8FC0C3;
-  --cream: #D8BE99;
-  --brown: #BA8C5A;
-}
-
 body {
   font-family: 'News Cycle', sans-serif;
   background-color: #ebebeb;
   overflow-x:hidden;
+  scroll-behavior: smooth;
 }
