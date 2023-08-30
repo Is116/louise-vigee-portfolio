@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 
 const Header = () => {
   const links = [
-    { text: 'Home', url: '/' },
-    { text: 'Arts', url: '/arts' },
+    { text: 'Home', url: '#hero' },
+    { text: 'Arts', url: '#arts' },
     { text: 'About', url: '/about' },
     { text: 'Contact', url: '/contact' }
   ];
@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className='header'>
       <nav className="px-4 md:px-8 py-3">
         <div className="flex justify-between items-center mx-auto max-w-screen-xl">
           <a href="/" className="flex items-center order-2 md:order-1">
@@ -47,12 +47,12 @@ const Header = () => {
             <ul className="flex flex-col font-medium text-lg md:flex-row gap-2 m-1">
               {links.map((link, index) => (
                 <li key={index}>
-                  <button
+                  <a
                     href={link.url}
                     className="block py-1 px-12 w-full text-black rounded-full bg-primary-700 md:bg-transparent md:hover:bg-[#ff6a69] focus:bg-[#ff6a69]"
                   >
                     {link.text}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
