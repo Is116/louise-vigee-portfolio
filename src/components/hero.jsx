@@ -14,6 +14,14 @@ const Hero = () => {
       <div className='flex text-center justify-center sm:-m-16 sm:-z-10'>
         <img className="rounded-2xl sm:rounded-full w-full sm:w-80 h-80 object-cover" src="images/profile.jpg" alt="Louise Vigée"/>
       </div>
+      <div className='flex flex-col sm:flex-row justify-center gap-8 md:gap-24 mt-8 sm:mt-32'>
+        <div className='w-full md:w-80 text-base md:text-lg uppercase'>
+        Élisabeth Louise Vigée Le Brun also known as Madame Le Brun and Louise élisabeth vigee Le Brun, was a French painter who mostly specialized in portrait
+        </div>
+        <div className='w-full md:w-80 text-base md:text-lg uppercase'>
+        Élisabeth Louise Vigée Le Brun also known as Madame Le Brun and Louise élisabeth vigee Le Brun, was a French painter who mostly specialized in portrait
+        </div>
+      </div>
     </div>
   )
 }
