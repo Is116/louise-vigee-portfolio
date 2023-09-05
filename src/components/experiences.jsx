@@ -75,6 +75,9 @@ const Experiences = () => {
             </article>
           ))}
             </div>
+            <div className='flex justify-center mt-10 lg:mt-20'>
+                <a href='/all-experien' className='border-2 border-black py-2 px-20 lg:px-36 rounded-full font-medium text-xl lg:text-2xl'>See More Arts</a>
+            </div>
         </div>
     </section>
   )
