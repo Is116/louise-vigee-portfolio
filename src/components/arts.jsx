@@ -29,7 +29,7 @@ const Arts = () => {
     <section id='arts'>
         <div className='min-h-screen gap-4 my-16 lg:my-32 px-4 lg:px-20'>
             <div className='flex'>
-                <h2 className='font-bold text-5xl lg:text-7xl uppercase'>Selected Arts</h2>
+                <p className='font-bold text-5xl lg:text-7xl uppercase'>Selected Arts</p>
             </div>
             <div className='flex flex-col md:flex-row justify-center items-center gap-8 lg:gap-12 mt-8 lg:mt-20'>
             {selectedArts.map((art) => (
@@ -57,7 +57,7 @@ const Arts = () => {
           ))}
             </div>
             <div className='flex justify-center mt-10 lg:mt-20'>
-                <a href='/all-arts' className='border-2 border-black py-2 px-20 lg:px-36 rounded-full font-semibold text-xl lg:text-3xl'>See More Arts</a>
+                <a href='/all-arts' className='border-2 border-black py-2 px-20 lg:px-36 rounded-full font-medium text-xl lg:text-2xl'>See More Arts</a>
             </div>
         </div>
     </section>

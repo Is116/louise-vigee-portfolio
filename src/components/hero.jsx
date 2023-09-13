@@ -9,9 +9,9 @@ const Hero = () => {
             Hi! I'd Like
           </div>
         </div>
-        <h1 className="text-center text-8xl md:text-9xl xl:text-10.5rem font-extrabold uppercase">
+        <p className="text-center text-8xl md:text-9xl xl:text-10.5rem font-extrabold uppercase">
           To Tell You <br /> About Myself
-        </h1>
+        </p>
         <div className="flex text-center justify-center sm:-m-16 sm:-z-10">
           <img
             className="rounded-2xl sm:rounded-full w-full sm:w-80 h-80 object-cover"

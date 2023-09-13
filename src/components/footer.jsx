@@ -42,11 +42,11 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        <button className="bg-[#ebebeb] text-black py-2 px-20 lg:px-36 rounded-full font-extrabold text-xl lg:text-3xl">
+        <button className="bg-[#ebebeb] text-black py-2 px-20 lg:px-36 rounded-full font-bold text-xl lg:text-3xl">
           Send Me Email
         </button>
       </div>
-      <div className="font-medium text-xl ">
+      <div className="font-medium text-base">
         Made With &#129293; By Isuru Pathirathna
       </div>
     </footer>
