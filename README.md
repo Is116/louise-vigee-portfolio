@@ -1,4 +1,4 @@
-# Topus Louise Vigée UI
+# Louise Vigée UI
 
 ## Overview
 
@@ -16,7 +16,7 @@ Welcome to the Topus Louise Vigée UI project. This UI design is inspired by the
 
 ## Screenshots
 
-![Screenshot 1](./screenshots/ss2.png)
+![Screenshot 1](./screenshots/ss2.png) <br/><br/>
 ![Screenshot 2](./screenshots/ss3.png)
 
 ## Installation
